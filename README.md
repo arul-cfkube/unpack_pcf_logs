@@ -1,5 +1,5 @@
 # unpack_pcf_logs
-shell script to unzip / untar  pcf logs
+shell script to recursively unpack  pivtal cloud foundry logs
 
 
 Copy unpack file to your executable path Eg: cp unapck /usr/local/bin
