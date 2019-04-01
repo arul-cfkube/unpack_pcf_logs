@@ -1,5 +1,5 @@
 # unpack_pcf_logs
-shell script to recursively unpack  pivtal cloud foundry logs
+shell script to recursively unpack  pivotal cloud foundry logs
 
 
 Copy unpack file to your executable path Eg: cp unapck /usr/local/bin
