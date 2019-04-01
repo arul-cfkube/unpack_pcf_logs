@@ -1,0 +1,37 @@
+
+if [ "$1" == "-h" ] || [ "$1" == "--help" ] ||  [ "$1" == "help" ]  ;
+then
+  echo "Usage: unpack router-e31a99ce5e83.zip "
+  exit 0
+fi
+
+folder=`ls $1 | cut -d . -f 1`
+
+echo $folder
+
+mkdir $folder
+unzip $1 -d $folder
+
+for a in `ls $folder/*.tgz`
+
+do
+
+subfolder=`expr $a : '\(.*\).tgz'`
+mkdir $subfolder
+tar -xvzf $a -C $subfolder/
+
+rm $a
+
+for b in `ls $subfolder/*.tgz`
+
+do
+
+first_subfolder=`expr $b : '\(.*\).tgz'`
+mkdir $first_subfolder
+tar -xvzf $b -C $first_subfolder/
+
+rm $b
+
+done
+
+done
