@@ -1,9 +1,12 @@
 
+## help
 if [ "$1" == "-h" ] || [ "$1" == "--help" ] ||  [ "$1" == "help" ]  ;
 then
   echo "Usage: unpack router-e31a99ce5e83.zip "
   exit 0
 fi
+
+## unzip 
 
 folder=`ls $1 | cut -d . -f 1`
 
@@ -11,6 +14,8 @@ echo $folder
 
 mkdir $folder
 unzip $1 -d $folder
+
+## untar 
 
 for a in `ls $folder/*.tgz`
 
