@@ -22,8 +22,10 @@ tar -xvzf $a -C $subfolder/
 
 rm $a
 
-for b in `ls $subfolder/*.tgz`
+if [ `ls $subfolder/*.tgz 2>/dev/null | wc -l` != 0 ] ;
+then
 
+for b in `ls $subfolder/*.tgz`
 do
 
 first_subfolder=`expr $b : '\(.*\).tgz'`
@@ -33,5 +35,5 @@ tar -xvzf $b -C $first_subfolder/
 rm $b
 
 done
-
+fi
 done
