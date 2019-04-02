@@ -2,7 +2,7 @@
 shell script to recursively unpack  pivotal cloud foundry logs
 
 
-Copy unpack file to your executable path Eg: cp unapck /usr/local/bin
+Copy unpack file to  executable path Eg: cp unapck /usr/local/bin
 
 Give it permission to execute  Eg: chmod +x unpack
 
